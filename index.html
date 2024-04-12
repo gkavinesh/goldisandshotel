@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Goldi Sands</title>
+  <title>Goldi Sands Hotel </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
   <link rel="shortcut icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
@@ -23,17 +23,35 @@
 <body>
   <div class="offer-banner">
     <div class="container">
-      <p>Get up to 30% off on your stay! <a href="#">Book Now</a></p>
+      <p>Get up to 30% off on your stay! <a href="bookings.html">Book Now</a></p>
       <i class="close-icon fas fa-times"></i>
     </div>
   </div>
   <section class="head">
     <div class="container flex1">
       <div class="logo">
-        <a href="index.html"><img src="assets/goldisandslogo.png" alt=""></a>
+        <a href="index.html"><img src="assets/GOLDI-SANDS-removebg-preview.png" alt="" width="75px" height="75px"></a>
       </div>
-      <a><button class="button-55" role="button">Book Now</button></a>
+      <h2  id="hotel-name"></h2>
+      <a href="bookings.html" class="book-now-button"><button class="button-55" role="button">Book Now</button></a>
     </div>
+    <script>
+    var hotelName = "Goldi Sands Hotel";
+    var hotelNameElement = document.getElementById("hotel-name");
+    var index = 0;
+    function type() {
+      if (index < hotelName.length) {
+        hotelNameElement.innerHTML += hotelName.charAt(index);
+        index++;
+        setTimeout(type, 200); 
+      }
+    }
+
+    window.onload = function() {
+      type();
+    };
+
+    </script>
   </section>
   
 
@@ -47,9 +65,9 @@
 
             <ul class="nav-menu">
                 <li> <a href="index.html" class="dropbtn">Home</a> </li>
-                <li> <a href="about.html" class="dropbtn">About</a> </li>
                 <li> <a href="rooms.html" class="dropbtn">Rooms</a> </li>
                 <li> <a href="dining.html" class="dropbtn">Dining</a> </li>
+                <li> <a href="dining.html" class="dropbtn">Deluxe Wing</a> </li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Events <i class="fas fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -74,7 +92,7 @@
                       </div>
                     </div>
                 </li>
-                <li> <a href="location.html" class="dropbtn">Location</a> </li>
+                <li> <a href="gallery.html" class="dropbtn">Gallery</a> </li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -132,9 +150,11 @@
         <div class="left">
           <h3>Discover the Allure of Negombo</h3>
           <br>
-          <p>Negombo is a popular beachside retreat situated just minutes away from the International Airport.</p>
-          <p>It boasts of some of the finest beaches in the country along with other attractions such as the Muthurajawela marshes which is home to many varieties of fauna, flora and birds, 100 km long canal network, the Dutch Fort built in 1672, the ancient churches, the second largest fish market in the country along with the daily fish auctions, lagoon boat rides and much more. </p>
-          <p>Negombo also provides easy access to Dolphin and Whale watching at Kalpitiya and the Wilpattu National Park.</p>
+          <p>Goldi Sands Hotel, situated on the picturesque beaches of Negombo, offers 131 luxurious rooms catering to every guest's needs. 
+            With options ranging from deluxe sea-view rooms to spacious suites, each accommodation boasts stylish decor and modern amenities. 
+            Guests can bask in the warmth of the sun by the pool, indulge in water sports, or simply unwind on the pristine beach. 
+            As night falls, the hotel comes alive with entertainment and delectable dining experiences, including private candlelit dinners by the ocean. 
+            Our dedicated staff is committed to providing personalized service, ensuring a memorable and enjoyable stay for all our guests at Goldi Sands Hotel.</p>
         </div>
         <div class="right">
           <img src="assets/71.jpg" alt="" width="700px" height="500px">
@@ -151,20 +171,28 @@
           <div class="heading">
             <h5>EXPERIENCES</h5>
             <br>
-            <h3>Negombo Beach</h3>
+            <h3>Our Deluxe Wing</h3>
           </div>
-          <p>The wide, golden beaches, turquoise ocean waves, swaying coconut palms and colourful fishing boats has made Negombo a popular and one of the major tourist destinations in the Sri Lanka. </p>
-          <p>Boasting of some of the finest and un-spoilt beaches, it provides plenty of opportunity for sea bathing, diving and adventure sports.</p>
-          <p>Play a game of beach volleyball or just relax under the sunshades listening to the endless music of the ocean. Let the blue of the ocean blending gracefully with the golden sands and the setting sun which slowly fades away be an inspiration to the body and soul.</p>
+          <p>Goldi Sands Deluxe Rooms offer a luxurious stay with a host of amenities for guest comfort. 
+            Each room features air-conditioning, a choice of king-size or twin beds, and a spacious work desk. 
+            Complimentary Wi-Fi and international dial telephones keep guests connected, while smart TVs provide entertainment. 
+            Safety boxes and mini-bars offer convenience, along with tea/coffee facilities. Guests can relax in the sitting area, enjoy rain showers in the bathroom, and use provided bathrobes, slippers, and hairdryers. 
+            Connecting rooms are available for families or groups, ensuring a pleasant stay for all.
+          </p>
+         
+          
         </div>
         <div class="item">
           <div class="heading">
             <h5>EXPERIENCES</h5>
             <br>
-            <h3>Historical Temples</h3>
+            <h3>Goldi Sands Wellness Center</h3>
           </div>
-          <p>Visit the many historical Buddhist temples around Negombo. The most popular of the Buddhist temples is the Bodhirajarama Maha Viharaya Angurukaramulla Temple with its beautiful shrine room decorated with paintings and sculptures that depict the life of the Buddha and inspiring Jathaka stories.</p>
-          <p> The room that holds the statues called the 'Pilima Ge' contains gigantic statues of all the ancient Kings of Sri Lanka. Observe Buddhist monks dressed in saffron robes, devoted worshippers dressed in white and others meditating under the shade of the Bo tree. Enjoy the peace and tranquility!</p>
+          <p>Ayurveda meaning the “science of life” is a 5000 year old traditional healing system using natural ingredients and methods. 
+            This technique of healing creates harmony between mind, body and soul while detoxifying and strengthen the defenses of the body. 
+            At Goldi Sands Ayurveda Wellness Center you can pamper yourself with this renowned art of holistic care under the supervision of trained therapists. 
+            Let our professionally skilled therapists’ help you indulge in body massages, hot oil treatments, herbal baths and much more. 
+            Treat yourself to some luxury…relax, refresh and rejuvenate naturally!</p>
         </div>
         <div class="item">
           <div class="heading">
@@ -206,7 +234,8 @@
   <section class="wrapper2">
     <div class="container">
       <div class="heading mtop">
-        <h5>EVENTS</h5>
+        <h5>MEETINGS & EVENTS</h5>
+        <br>
         <h2>Our Facilities</h2>
       </div>
 
@@ -276,15 +305,17 @@
         <br>
         <h3>Indulge in Culinary Excellence at Goldi Sands</h3>
       </div>
-
+      <br>
       <div class="content flex mtop">
         <div class="left">
-          <img src="assets/goldi-sands-hotel.jpg" alt="" height="475px" width="675px">
+          <img src="assets/goldi-sands-hotel.jpg" alt="" height="450px" width="650px">
         </div>
         <div class="right">
           <h3>Our Dining</h3>
-          <p>Dining at Goldi Sands is a specialty by itself. The hotel is renowned for excellent sea food bought straight from the fishing boats in the vicinity of the hotel. You can choose from a wide list of mouthwatering sea food delicacies prepared by our experienced chefs; the freshness and flavor of the sea food cuisine is certainly going to make you ask for more.</p>
-          <p>You can also tuck into a wide and varied A la Carte menu featuring both international and local cuisine prepared to suite the discerning taste of guests. Still more if there is a special dish you wish to have made, just request it and our chefs will be more than happy to prepare it for you.</p>
+          <p>Goldi Sands offers an exceptional dining experience, renowned for its fresh seafood sourced directly from nearby fishing boats. 
+            Guests can savor mouthwatering seafood delicacies prepared by experienced chefs, as well as international and local cuisine from an extensive à la carte menu. The well-stocked bar offers a selection of fine wines and cocktails to complement your meal. 
+            Theme night buffets, including Chinese, Italian, and Seafood Extravaganza, add excitement to dining, along with beach barbecues under the stars. For a romantic touch, private dining can be arranged on the beach or by the pool. 
+            With attentive service and a cozy atmosphere, dining at Goldi Sands promises excellent value and a memorable experience.</p>
         </div>
       </div>
     </div>
@@ -322,9 +353,10 @@
     <div class="container">
       <div class="heading">
         <h5>Guest Reviews</h5>
+        <br>
         <h3>What visitors say</h3>
       </div>
-
+      <br>
       <div class="owl-carousel owl-theme mtop">
         <div class="item">
           <div class="rate">
@@ -499,6 +531,7 @@
     <div class="container">
       <div class="heading">
         <h5>EXPERIENCES</h5>
+        <br>
         <h3>Attractions and Excursions</h3>
       </div>
 
@@ -553,10 +586,10 @@
     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
     </defs>
     <g class="parallax">
-    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(203,175,169,0.5)" />
-    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(203,175,169,0.7)" />
-    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(203,175,169,1)" />
-    <use xlink:href="#gentle-wave" x="48" y="7" fill="#caafa8" />
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(41,22,108,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(41,22,108,0.7)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(41,22,108,1)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#29166c" />      
     </g>
     </svg>
     </div>
@@ -566,6 +599,7 @@
     <div class="logo">
       <a href="index.html"><img src="assets/goldisandslogo.png" alt=""></a>
     </div>
+    <br>
     <br>
     <div class="social-links-footer">
       <a href="#"><i class="fab fa-facebook fa-2x"></i></a>

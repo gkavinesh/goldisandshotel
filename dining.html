@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Goldi Sands</title>
+  <title>Goldi Sands Hotel </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styledining.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -19,13 +21,13 @@
 </head>
 
 <body>
-  <div class="offer-banner">
-  </div>
   <section class="head">
     <div class="container flex1">
       <div class="logo">
-        <a href="index.html"><img src="assets/goldisandslogo.png" alt=""></a>
+        <a href="index.html"><img src="assets/GOLDI-SANDS-removebg-preview.png" alt="" width="75px" height="75px"></a>
       </div>
+      <h2>Goldi Sands Hotel</h2>
+      <a href="bookings.html" class="book-now-button"><button class="button-55" role="button">Book Now</button></a>
     </div>
   </section>
   
@@ -33,30 +35,51 @@
 
   <header class="header">
     <div class="container">
-      <nav class="navbar flex1">
-        <div class="sticky_logo logo">
-          <img src="assets/goldisandslogo.png" alt="">
-        </div>
+        <nav class="navbar flex1">
+            <div class="sticky_logo logo">
+                <img src="assets/goldisandslogo.png" alt="">
+            </div>
 
-        <ul class="nav-menu">
-            <li> <a href="index.html">Home</a> </li>
-            <li> <a href="about.html">About</a> </li>
-            <li> <a href="location.html">Location</a> </li>
-            <li> <a href="rooms.html">Rooms</a> </li>
-            <li> <a href="dining.html">Dining</a> </li>
-            <li> <a href="leisure.html">Leisure</a> </li>
-            <li> <a href="events.html">Events</a> </li>
-            <li> <a href="gallery.html">Gallery</a> </li>
-            <li> <a href="bookings.html">Bookings</a> </li>
-          </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+            <ul class="nav-menu">
+                <li> <a href="index.html" class="dropbtn">Home</a> </li>
+                <li> <a href="rooms.html" class="dropbtn">Rooms</a> </li>
+                <li> <a href="dining.html" class="dropbtn">Dining</a> </li>
+                <li> <a href="dining.html" class="dropbtn">Deluxe Wing</a> </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Events <i class="fas fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                      <div class="banquet-content">
+                        <a href="banquets.html">Banquets</a>
+                      </div>
+                      <div class="wedding-content">
+                        <a href="weddings.html">Destination Weddings</a>
+                      </div>
+                      <div class="mice-content">
+                        <a href="mice.html">MICE</a></div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="leisure.html" class="dropbtn">Leisure <i class="fas fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                      <div class="spa-content">
+                        <a href="leisure.html">SPA</a>
+                      </div>
+                      <div class="swimming-content">
+                        <a href="leisure.html">Swimming</a>
+                      </div>
+                    </div>
+                </li>
+                <li> <a href="gallery.html" class="dropbtn">Gallery</a> </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </div>
-  </header>
+</header>
+
   <script>
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");
@@ -72,61 +95,97 @@
       var header = document.querySelector("header");
       header.classList.toggle("sticky", window.scrollY > 0)
     })
-
-    document.querySelector('.close-icon').addEventListener('click', function() {
-      const banner = document.querySelector('.offer-banner');
-      banner.style.opacity = 0; // Fade out the banner
-      setTimeout(() => {
-        banner.style.display = 'none';
-      }, 500); // Hide the banner after 0.5s
-    });
-
-
   </script>
 
+<section class="home" id="home">
+</section>
 
-  <section class="home" id="home">
-    <div class="container">
-      <h1>About Us</h1>
+<section class="about" id="about">
+  <div class="container">
+    <div class="heading">
+      <br>
+      <h5>EXPLORE</h5>
+      <br>
+      <h2>Our Dining</h2>
     </div>
-  </section>
 
-  <section class="about" id="about">
-    <div class="container">
-      <div class="heading">
-        <h5>EXPLORE</h5>
+    <div class="content flex  top">
+      <div class="left">
+        <h3>Savor the Flavors of Goldi Sands</h3>
         <br>
-        <h2>We are cool to give you pleasure
-        </h2>
-      </div>
+        <p>Dining at Goldi Sands is a specialty by itself. The hotel is renowned for excellent sea food bought straight from the fishing boats in the vicinity of the hotel. You can choose from a wide list of mouthwatering sea food delicacies prepared by our experienced chefs; the freshness and flavor of the sea food cuisine is certainly going to make you ask for more.
 
-      <div class="content flex  top">
-        <div class="left">
-          <h3>As much as comfort want to get from us everything
-          </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          You can also tuck into a wide and varied A la Carte menu featuring both international and local cuisine prepared to suite the discerning taste of guests. Still more if there is a special dish you wish to have made, just request it and our chefs will be more than happy to prepare it for you.
+          
+          And what better way to enjoy the culinary delights than a bottle of fine wine from our well stocked bar which provides a wide variety of coolers and cocktails to lager and liquor, sipped over a game of pool.</p>
+      </div>
+      <div class="right">
+        <img src="assets/right-dektop.jpg" alt="" width="700px" height="500px">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="blog top" id="blog">
+  <div class="container">
+    <div class="heading">
+      <h5>EXPERIENCES</h5>
+      <br>
+      <h3>Attractions and Excursions</h3>
+    </div>
+
+    <div class="content grid mtop">
+      <div class="box">
+        <div class="img">
+          <img src="assets/50.jpg" alt="">
+          <span>HOTEL</span>
         </div>
-        <div class="right">
-          <img src="assets/76.jpg" alt="" width="700px" height="500px">
+        <div class="text">
+          <h3>Negombo Fish Market</h3>
+          <p> The wide, golden beaches, turquoise ocean waves, swaying coconut palms and colourful fishing boats has made Negombo a popular and one of the major tourist destinations in the Sri Lanka.</p>
+          <a href="#">Read More <i class='far fa-long-arrow-alt-right'></i> </a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="img">
+          <img src="assets/01 (1).jpg" alt="">
+          <span>HOTEL</span>
+        </div>
+        <div class="text">
+          <h3>Historic Temples</h3>
+          <p> Visit the second largest fish market in the country, locally called the 'Lellama'. The busy Negombo fish market is worth a visit if you want to see fresh sea food such as hundreds of varieties of fish, crabs, lobsters, squid and prawns being brought in from the nearby boats.</p>
+          <a href="#">Read More <i class='far fa-long-arrow-alt-right'></i> </a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="img">
+          <img src="assets/01 (2).jpg" alt="">
+          <span>HOTEL</span>
+        </div>
+        <div class="text">
+          <h3>Clay Tile Factories</h3>
+          <p> Visit a traditional factory that produces environmentally friendly clay tiles. Clay tiles have been used for hundreds of years in Sri Lanka and are much in demand for its naturally cooling and healthy attributes in addition to its aesthetic appeal.</p>
+          <a href="#">Read More <i class='far fa-long-arrow-alt-right'></i> </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <div>
+
+<div>
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 24 200 40" preserveAspectRatio="none" shape-rendering="auto">
     <defs>
     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
     </defs>
     <g class="parallax">
-    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(203,175,169,0.5)" />
-    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(203,175,169,0.7)" />
-    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(203,175,169,1)" />
-    <use xlink:href="#gentle-wave" x="48" y="7" fill="#caafa8" />
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(41,22,108,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(41,22,108,0.7)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(41,22,108,1)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#29166c" />      
     </g>
     </svg>
     </div>
@@ -149,18 +208,14 @@
       <i class="fa fa-location" aria-hidden="true"></i>
       <p>Ethukala, Negombo, Sri Lanka</p>
       <i class="fa fa-phone" aria-hidden="true"></i>
-      <p>+94-312-279-021  <b>|</b> +94-312-279-227  <b>|</b>  +94-312-278-020</p>
+      <p>+94-312-279-021&nbsp;<b>|</b>&nbsp;+94-312-279-227&nbsp;<b>|</b>&nbsp;+94-312-278-020</p>
       <i class="fa fa-envelope" aria-hidden="true"></i>
       <p>goldi@eureka.lk</p>
     </div>
     <br>
     <br>
-    <br>
-    <br>
+
     <p1> © 2024 Goldi Sands Hotel. All Rights Reserved - <b> | </b> - 🛠️ Developed by 12BK Private Limited </p1>
 
   </div>
 </body>
-
-
-</html>
