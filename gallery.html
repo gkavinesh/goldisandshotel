@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Goldi Sands Hotel </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/GOLDI-SANDS-removebg-preview.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/stylegallery.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <section class="head">
+    <div class="container flex1">
+      <div class="logo">
+        <a href="index.html"><img src="assets/GOLDI-SANDS-removebg-preview.png" alt="" width="75px" height="75px"></a>
+      </div>
+      <h2>Goldi Sands Hotel</h2>
+      <a href="bookings.html" class="book-now-button"><button class="button-55" role="button">Book Now</button></a>
+    </div>
+  </section>
+  
+
+
+  <header class="header">
+    <div class="container">
+        <nav class="navbar flex1">
+            <div class="sticky_logo logo">
+                <img src="assets/goldisandslogo.png" alt="">
+            </div>
+
+            <ul class="nav-menu">
+                <li> <a href="index.html" class="dropbtn">Home</a> </li>
+                <li> <a href="rooms.html" class="dropbtn">Rooms</a> </li>
+                <li> <a href="dining.html" class="dropbtn">Dining</a> </li>
+                <li> <a href="deluxewing.html" class="dropbtn">Deluxe Wing</a> </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Events <i class="fas fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                      <div class="banquet-content">
+                        <a href="banquets.html">Banquets</a>
+                      </div>
+                      <div class="wedding-content">
+                        <a href="weddings.html">Destination Weddings</a>
+                      </div>
+                      <div class="mice-content">
+                        <a href="mice.html">MICE</a></div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="leisure.html" class="dropbtn">Leisure <i class="fas fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                      <div class="spa-content">
+                        <a href="leisure.html">SPA</a>
+                      </div>
+                      <div class="swimming-content">
+                        <a href="leisure.html">Swimming</a>
+                      </div>
+                    </div>
+                </li>
+                <li> <a href="gallery.html" class="dropbtn">Gallery</a> </li>
+                <li> <a href="" class="dropbtn">Offers</a> </li>
+                
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobliemmenu);
+
+    function mobliemmenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+
+<section class="home" id="home">
+</section>
+
+<section class="about-1" id="about">
+  <div class="container">
+    <div class="heading">
+      <br>
+      <h5>EXPLORE</h5>
+      <br>
+      <h2>Gallery</h2>
+    </div>
+</section>
+
+
+
+
+<div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 200 40" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(41,22,108,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(41,22,108,0.7)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(41,22,108,1)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#29166c" />      
+    </g>
+    </svg>
+    </div>
+  </div>
+  <div class="content-footer flex-footer">
+
+    <div class="logo">
+      <a href="index.html"><img src="assets/goldisandslogo.png" alt=""></a>
+    </div>
+    <br>
+    <br>
+    <div class="social-links-footer">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-google-plus fa-2x" ></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+    <br>
+    <br>
+    <div class="contact-details-footer">
+      <i class="fa fa-location" aria-hidden="true"></i>
+      <p>Ethukala, Negombo, Sri Lanka</p>
+      <i class="fa fa-phone" aria-hidden="true"></i>
+      <p>+94-312-279-021&nbsp;<b>|</b>&nbsp;+94-312-279-227&nbsp;<b>|</b>&nbsp;+94-312-278-020</p>
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <p>goldi@eureka.lk</p>
+    </div>
+    <br>
+    <br>
+
+    <p1> © 2024 Goldi Sands Hotel. All Rights Reserved - <b> | </b> - 🛠️ Developed by 12BK Private Limited </p1>
+
+  </div>
+</body>

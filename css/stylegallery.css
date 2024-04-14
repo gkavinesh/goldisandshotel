@@ -474,7 +474,7 @@ p {
 .about-1 {
   position: relative;
   padding-bottom: 10%;
-  height:30vh;
+  height:90vh;
   margin-bottom: 2vh;
 }
 
@@ -501,7 +501,7 @@ p {
 .about-1::after {
   content: '';
   position: absolute;
-  top: -13%;
+  top: -4%;
   left: 0;
   background-image: url("../image/line1.png");
   background-size: cover;
@@ -528,8 +528,8 @@ p {
   position: relative;
   padding-bottom: 10%;
   height:70vh;
+  margin-bottom: 2vh;
 }
-
 
 .about-2 .right {
   position: relative;
@@ -554,7 +554,7 @@ p {
 .about-2::after {
   content: '';
   position: absolute;
-  top: -6%;
+  top: -5%;
   left: 0;
   background-image: url("../image/line1.png");
   background-size: cover;
@@ -575,48 +575,11 @@ p {
   width: 100%;
 }
 
-.marquee-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the min and max width as needed */
-  gap: 20px; /* Adjust the gap between items */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 2px solid #ccc; /* Adjust the border color and thickness as needed */
-  border-radius: 10px; /* Adjust the border radius as needed */
-  padding: 20px; /* Adjust the padding as needed */
-  transition: transform 0.3s ease; /* Add a smooth hover effect */
-}
-
-.icon-container:hover {
-  transform: translateY(-5px); /* Adjust the hover effect as needed */
-}
-
-.pricing-img {
-  margin-bottom: 10px; /* Adjust the margin as needed */
-}
-
-span {
-  font-size: 14px; /* Adjust the font size as needed */
-  color: #333; /* Adjust the color as needed */
-}
-
-
-  
-
 /*------------about------------*/
 /*------------wrapper------------*/
 .wrapper {
-  background-color: #ffffff;
-  height: 30vh;
+  background-color: #cc8d18;
+  height: 80vh;
   display: flex; /* Use flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -624,87 +587,108 @@ span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 7%;
+}
+
+.wrapper .left{
+  margin-left: 6rem;
+}
+
+.wrapper .left p{
+  color: black;
+}
+
+.gallery {
+  --g: 6px; /* the gap */
+  display: grid;
+  width: 450px; /* the size */
+  aspect-ratio: 1;
+  grid: auto-flow 1fr / repeat(3, 1fr);
+  gap: var(--g);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale();
+  cursor: pointer;
+  transition: .5s
+}
+.gallery img:hover {
+  filter: grayscale(0);
+}
+.gallery img:nth-child(2) {
+  grid-area: 1/2/span 2/span 2;
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + var(--g)/4) 100%,0 calc(50% - var(--g)/4))
+}
+.gallery img:nth-child(3) {
+  grid-area: 2/1/span 2/span 2;
+  clip-path: polygon(0 0,calc(50% - var(--g)/4) 0,100% calc(50% + var(--g)/4),100% 100%,0 100%);
 }
 
 
-
-.wrapper .right{
+/*------------wrapper------------*/
+/*------------wrapper2------------*/
+.wrapper2 {
+  position: relative;
   text-align: center;
+  height: 30rem;
 }
 
-.gallery-image {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .gallery-image img {
-    height: 300px;
-    width: 400px;
-    transform: scale(1.0);
-    transition: transform 0.4s ease;
-  }
-  
-  .img-box {
-    box-sizing: content-box;
-    margin: 10px;
-    height: 290px;
-    width: 380px;
-    overflow: hidden;
-    display: inline-block;
-    color: white;
-    position: relative;
-    background-color: white;
-    border-radius: 10px;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    opacity: 0.0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .transparent-box {
-    height: 290px;
-    width: 380px;
-    background-color:rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .img-box:hover img { 
-    transform: scale(1.1);
-  }
-  
-  .img-box:hover .transparent-box {
-    background-color:rgba(0, 0, 0, 0.5);
-  }
-  
-  .img-box:hover .caption {
-    transform: translateY(-20px);
-    opacity: 1.0;
-  }
-  
-  .img-box:hover {
-    cursor: pointer;
-  }
-  
-  .caption > p:nth-child(2) {
-    font-size: 0.8em;
-  }
-  
-  .opacity-low {
-    opacity: 0.5;
-  }
+.wrapper2 .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 
+.wrapper2 .box {
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.wrapper2 i {
+  margin: 10px 0 15px 0;
+  color: #CC8C18;
+  font-size: 30px;
+}
+
+.wrapper2 h3 {
+  font-size: 20px;
+}
+
+.wrapper2 span {
+  padding: 10px;
+  background: #F5E8D1;
+  color: #CC8C18;
+  border-radius: 50%;
+}
+
+.wrapper2 .box:hover {
+  background: #CC8C18;
+  cursor: pointer;
+}
+
+.wrapper2 .box:hover span {
+  background: #fff;
+}
+
+.wrapper2 .box:hover p,
+.wrapper2 .box:hover h3,
+.wrapper2 .box:hover i {
+  color: white;
+}
+
+.wrapper2::after {
+  content: '';
+  position: absolute;
+  top: -22%;
+  left: 0;
+  background-image: url("../image/line1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 100%;
+  z-index: 2;
+}
 
 /*------------wrapper2------------*/
 /*------------room------------*/
@@ -965,130 +949,163 @@ span {
 /*------------offer2------------*/
 /*------------customer------------*/
 
-.customer h2{
+.customer .mtop {
+  padding: 5px;
+  max-width: 60%;
+  margin: auto;
   text-align: center;
-  color: #29166c;
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+}
+
+.customer i {
+  color: #CC8C18;
+  font-size: 13px;
+}
+
+.customer .heading h3{
   font-family: 'Great Vibes', cursive;
-  font-size: 60px;
+  font-size : 50px;
+}
+
+.customer .item h3 {
+  font-size: 20px;
+  font-family: "Belgrano", serif;
+}
+
+.customer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.customer .admin {
+  justify-content: center;
+}
+
+.customer .admin h3 {
+  margin: 0;
+}
+
+.customer .text {
+  margin: 10px;
+}
+
+.customer span {
+  opacity: 0.7;
 }
 
 
-.photos{
-  height: 40vh;
-  margin-top: -125px;
-}
 
-.photos .container{
-  display: flex;
-  padding: 20px 20px 20px 20px;
-}
-
-.photos p{
-  height: 200px;
-  width: 500px;
-  margin: 100px auto;
+/*------------customer------------*/
+/*------------gallary------------*/
+.gallary .item {
   position: relative;
-  top: 0;
+  cursor: pointer;
 }
 
-.photos img{
-  height: 100px;
+.gallary .overlay i {
   position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+  opacity: 0;
+  font-size: 50px;
+  color: white;
+}
+
+.gallary .overlay {
+  position: absolute;
+  content: '';
+  background: rgba(204, 140, 24, 0.73);
+  width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
-  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
-  box-shadow: 1px 1px 3px #0008;
-  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
-  z-index: 0;
+  opacity: 0;
 }
 
-.photos img:hover {
-  transform: scale(3);
-  /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
-  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
-  box-shadow: 3px 4px 10px #0006;
-  /* ensures that image gets on top of stack at the start of "popping" animation
-     and gets back at the end of getting back. With smaller value, 2 different transitions would be needed */
-  z-index: 999;
+.gallary .item:hover .overlay,
+.gallary .item:hover i {
+  opacity: 1;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-/* 3 images */
-.photos img:nth-last-child(3):first-child {
-  offset-distance: 17%;
-}
-.photos img:nth-last-child(2):nth-child(2) {
-  offset-distance: 49%;
-}
-.photos img:last-child:nth-child(3) {
-  offset-distance: 81%;
+/*------------gallary------------*/
+/*------------blog------------*/
+.blog .grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-/* 4 images */
-.photos img:nth-last-child(4):first-child {
-  offset-distance: 10%;
-}
-.photos img:nth-last-child(3):nth-child(2) {
-  offset-distance: 35%;
-}
-.photos img:nth-last-child(2):nth-child(3) {
-  offset-distance: 65%;
-}
-.photos img:last-child:nth-child(4) {
-  offset-distance: 90%;
+.blog .box {
+  box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+  transition: 0.5s;
 }
 
-/* 5 images */
-.photos img:nth-last-child(5):first-child {
-  offset-distance: 0%;
-}
-.photos img:nth-last-child(4):nth-child(2) {
-  offset-distance: 25%;
-}
-.photos img:nth-last-child(3):nth-child(3) {
-  offset-distance: 51%;
-}
-.photos img:nth-last-child(2):nth-child(4) {
-  offset-distance: 75%;
-}
-.photos img:last-child:nth-child(5) {
-  offset-distance: 100%;
+.blog .box:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
 }
 
-
-.photos .marquee h2{
+.blog .heading h3{
   font-family: 'Great Vibes', cursive;
-    color: #29166c;
-    text-align: center;
-    font-size: 60px;
+  font-size : 50px;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
-
-:root {
-  /* Colors */
-  --brand-color: hsl(46, 100%, 50%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
-  /* Fonts */
-  --font-title: "Montserrat", sans-serif;
-  --font-text: "Lato", sans-serif;
+.blog .text {
+  padding: 20px;
 }
 
-
-/* CARD COMPONENT */
-
-.deluxe{
-  height: 60vh;
+.blog img {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.deluxe .container{
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 50vh; /* Set container height to fill viewport */
-
+.blog .img {
+  position: relative;
+  overflow: hidden;
 }
 
+.blog span {
+  position: absolute;
+  top: -3%;
+  left: -12%;
+  z-index: 1;
+  color: white;
+  background: #CC8C18;
+  padding: 20px 50px;
+  transform: rotate(-45deg);
+  font-size: 14px;
+}
 
+.blog .box h3 {
+  font-size: 20px;
+}
+
+.blog .box i {
+  margin-right: 10px;
+  color: #CC8C18;
+}
+
+.blog .box i label {
+  color: black;
+}
+
+.blog .box h3 {
+  margin: 15px 0;
+}
+
+.blog a {
+  color: #CC8C18;
+  font-size: 15px;
+}
+
+/*------------blog------------*/
+/*------------map------------*/
+.map iframe {
+  width: 100%;
+}
 
 /*------------map------------*/
 /*------------footer------------*/

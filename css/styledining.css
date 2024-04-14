@@ -350,7 +350,7 @@ header.sticky ul li a {
 }
 
 .home {
-  background-color: #CC8C18;
+  background-color: #cc8d1881;
   height: 10vh;
   background-attachment: fixed;
   background-position: center;
@@ -491,7 +491,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  background: #CC8C18;
+  background: #cc8d1881;
   width: 85%;
   height: 45vh;
   z-index: -1;
@@ -578,8 +578,8 @@ p {
 /*------------about------------*/
 /*------------wrapper------------*/
 .wrapper {
-  background-color: #cc8d18;
-  height: 80vh;
+  background-color: #cc8d1881;
+  height: 70vh;
   display: flex; /* Use flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -1215,6 +1215,7 @@ footer .box {
   color: #ffffff;
   border-top: 1px solid rgb(255, 255, 255);
   padding-top: 20px; /* Adjust as needed */
+  font-size: 12px;
 }
 
 

@@ -350,7 +350,7 @@ header.sticky ul li a {
 }
 
 .home {
-  background-color: #CC8C18;
+  background-color: #cc8d1881;
   height: 10vh;
   background-attachment: fixed;
   background-position: center;
@@ -578,7 +578,7 @@ p {
 /*------------about------------*/
 /*------------wrapper------------*/
 .wrapper {
-  background-color: #cc8d18;
+  background-color: #cc8d1881;
   height: 80vh;
   background-attachment: fixed;
   background-position: center;
@@ -1667,6 +1667,7 @@ footer .box {
   color: #ffffff;
   border-top: 1px solid rgb(255, 255, 255);
   padding-top: 20px; /* Adjust as needed */
+  font-size: 12px;
 }
 
 
