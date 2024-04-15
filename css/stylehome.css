@@ -1703,7 +1703,7 @@ footer .box {
     flex-direction: column; /* Change flex direction to column for smaller screens */
     align-items: center; /* Center align items horizontally for smaller screens */
     text-align: center; /* Center align text for smaller screens */
-    height: 63vh;
+    height: 70vh;
   }
 
   .logo a img {

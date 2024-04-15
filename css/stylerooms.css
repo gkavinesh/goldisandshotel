@@ -159,6 +159,33 @@ a {
   box-shadow: rgba(255, 255, 255, 0.493) 2px 8px 4px -6px;
 }
 
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .head .container {
+    text-align: center; /* Center align container contents */
+    margin-bottom: 1rem;
+  }
+
+  .head .container h2 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    margin-left: 5rem;
+  }
+
+  .head .social {
+    margin-top: 1.5rem; /* Adjust margin for spacing */
+  }
+
+  .head .logo {
+    margin-right: -2rem;
+    display: none;
+  }
+
+  .head .container .book-now-button{
+      display: none; /* Hide the book-now link on mobile screens */
+
+  }
+}
+
 
 
 
@@ -342,6 +369,53 @@ header.sticky ul li a {
 }
 
 
+@media (max-width: 768px) {
+  .logo img {
+    width: 80px; /* Decrease logo size for smaller screens */
+  }
+
+  .navbar {
+    flex-direction: column;
+
+  }
+
+  .hamburger {
+    display: block; /* Display hamburger menu for mobile */
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu items by default on mobile */
+    flex-direction: column;
+    background-color: #29166c;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Display menu items when active (for mobile) */
+  }
+
+  .nav-menu li {
+    margin: 10px 0; /* Adjust spacing between menu items */
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: #29166c;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+
 /*------------home------------*/
 .grid {
   display: grid;
@@ -415,6 +489,25 @@ button i {
 
 button span {
   margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 0; /* Adjust padding for smaller screens */
+    height:10vh;
+  }
+
+  .home h1 {
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    display: none;
+  }
+
+  .home h2 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+
 }
 
 /*------------home------------*/
@@ -521,6 +614,51 @@ p {
   height: 50px;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .about-1 .left,
+  .about-1 .right {
+    width: 100%; /* Make both left and right sections take full width */
+    padding: 0 20px; /* Add padding to the sides */
+    margin-bottom: 20px; /* Add margin between sections */
+  }
+
+  .about-1 .right {
+    position: relative; /* Add relative positioning */
+  }
+
+  .about-1 .right img {
+    width: 100%; /* Make the image width 100% */
+    height: auto; /* Ensure aspect ratio is maintained */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin-top: 20px; /* Add space between paragraph and image */
+  }
+
+  .heading h2 {
+    font-size: 40px; /* Decrease heading font size */
+  }
+
+  .heading h5 {
+    font-size: 20px; /* Decrease subheading font size */
+    padding-top: 10px; /* Decrease top padding */
+  }
+
+  p {
+    font-size: 14px; /* Decrease paragraph font size */
+  }
+
+  .about-1::after,
+  .about-1::before {
+    display: none; /* Hide decorative lines */
+  }
+
+  .about-1 .right::after {
+    height: 30vh; /* Adjust height of background color */
+  }
+}
+
+
+
 
 /* css for about 2*/
 
@@ -657,7 +795,7 @@ p {
 }
 
 .blog-card:nth-child(3) {
-  background-image: url('../assets/deluxe-room.jpg');
+  background-image: url('../assets/deluxe-room1.jpg');
 }
 
 .blog-card:nth-child(4) {
@@ -1729,5 +1867,39 @@ footer .box {
   }
   100% { 
     transform: translate3d(85px,0,0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-footer {
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+    align-items: center; /* Center align items horizontally for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
+    height: 70vh;
+  }
+
+  .logo a img {
+    width: 230px; /* Adjust the width of the logo for smaller screens */
+    height: 75px; /* Maintain aspect ratio */
+  }
+  .social-links-footer {
+    margin-top: 20px; /* Add top margin for social links on smaller screens */
+  }
+
+  .social-links-footer a {
+    margin: 0 10px; /* Add horizontal margin between social icons on smaller screens */
+  }
+
+  .contact-details-footer {
+    margin-top: 20px; /* Add top margin for contact details on smaller screens */
+  }
+
+  .contact-details-footer p {
+    margin-bottom: 10px; /* Add bottom margin for contact details paragraphs on smaller screens */
+  }
+
+  p1 {
+    font-size: 12px; /* Decrease font size for footer text on smaller screens */
+    margin-top: 20px; /* Add top margin for footer text on smaller screens */
   }
 }
