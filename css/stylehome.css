@@ -69,6 +69,19 @@ a {
   margin-left: 22rem;
 }
 
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .offer-banner .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .close-icon {
+    margin: 0;
+    margin-top: 1rem; /* Adjust as needed */
+  }
+}
+
 
 
 .head {
@@ -156,6 +169,35 @@ a {
 
 .button-55:focus {
   box-shadow: rgba(255, 255, 255, 0.493) 2px 8px 4px -6px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .head .container {
+    text-align: center; /* Center align container contents */
+    margin-bottom: 1rem;
+  }
+
+  .head .container h2 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    margin-left: 5rem;
+  }
+
+  .head .social {
+    margin-top: 1.5rem; /* Adjust margin for spacing */
+  }
+
+  .head .logo {
+    margin-right: -2rem;
+    display: none;
+  }
+
+  .head .container .book-now-button{
+      display: none; /* Hide the book-now link on mobile screens */
+
+  }
+
+
 }
 
 
@@ -340,6 +382,51 @@ header.sticky ul li a {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .logo img {
+    width: 80px; /* Decrease logo size for smaller screens */
+  }
+
+  .navbar {
+    flex-direction: column;
+
+  }
+
+  .hamburger {
+    display: block; /* Display hamburger menu for mobile */
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu items by default on mobile */
+    flex-direction: column;
+    background-color: #29166c;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Display menu items when active (for mobile) */
+  }
+
+  .nav-menu li {
+    margin: 10px 0; /* Adjust spacing between menu items */
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: #29166c;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
 
 /*------------home------------*/
 .grid {
@@ -414,6 +501,26 @@ button i {
 
 button span {
   margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 0; /* Adjust padding for smaller screens */
+    height:40vh;
+    display: none;
+  }
+
+  .home h1 {
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    display: none;
+  }
+
+  .home h2 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+  }
+
 }
 
 /*------------home------------*/
@@ -527,6 +634,61 @@ p {
   width: 100%;
 }
 
+
+@media (max-width: 768px) {
+  .top {
+    margin-top: 50px; /* Decrease top margin for smaller screens */
+  }
+
+  .heading h2 {
+    font-size: 40px; /* Decrease font size for smaller screens */
+  }
+
+  .left, .right {
+    width: 100%; /* Make both left and right sections full width on smaller screens */
+  }
+
+  .about .right{
+    margin-right: 1rem;
+  }
+
+  .about .right::after {
+    width: 85%; /* Adjust width of pseudo-element on smaller screens */
+    height: 22vh; /* Decrease height of pseudo-element on smaller screens */
+  }
+
+  .about::after {
+    height: 20px;
+    display: none;
+  }
+
+  .about::before {
+    height: 20px; 
+    display: none;
+  }
+    
+
+  .content {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
+  .left, .right {
+    padding: 0 20px; /* Add padding to left and right sections for spacing */
+  }
+
+  .right {
+    margin-top: 20px; /* Add top margin to right section for spacing */
+  }
+
+  .right img {
+    width: 100%; /* Make image responsive within its container */
+    height: auto; /* Ensure aspect ratio is maintained */
+  }
+
+}
+
+
+
 /*------------about------------*/
 /*------------wrapper------------*/
 .wrapper {
@@ -595,6 +757,42 @@ p {
   color: white;
 }
 
+
+@media (max-width: 768px) {
+
+  .wrapper{
+    height: 130vh;
+  }
+  .wrapper .container {
+    max-width: 80%; /* Decrease max-width for smaller screens */
+  }
+
+  .wrapper .item {
+    padding: 30px; /* Decrease padding for smaller screens */
+    margin-top: 10%; /* Decrease top margin for smaller screens */
+    border-width: 20px; /* Decrease border width for smaller screens */
+  }
+
+  .owl-nav .owl-next,
+  .owl-nav .owl-prev {
+    top: 50%; /* Adjust position of navigation arrows for smaller screens */
+  }
+
+  .owl-nav .owl-next {
+    right: 10px; /* Adjust position of next arrow for smaller screens */
+  }
+
+  .owl-nav .owl-prev {
+    left: 10px; /* Adjust position of previous arrow for smaller screens */
+  }
+
+  .owl-nav .owl-next i,
+  .owl-nav .owl-prev i {
+    padding: 5px; /* Decrease padding for arrow icons for smaller screens */
+  }
+}
+
+
 /*------------wrapper------------*/
 /*------------wrapper2------------*/
 .wrapper2 {
@@ -645,6 +843,7 @@ p {
   color: white;
 }
 
+
 .wrapper2::after {
   content: '';
   position: absolute;
@@ -657,6 +856,39 @@ p {
   width: 100%;
   z-index: 2;
 }
+
+@media (max-width: 768px) {
+  .wrapper2 {
+    height: auto; /* Change height to auto for smaller screens */
+  }
+
+  .wrapper2 .grid {
+    grid-template-columns: repeat(1, 1fr); /* Change grid layout to a single column for smaller screens */
+  }
+
+  .wrapper2 .box {
+    margin-bottom: 20px; /* Add margin between boxes for smaller screens */
+  }
+
+  .wrapper2 i {
+    font-size: 24px; /* Decrease icon size for smaller screens */
+  }
+
+  .wrapper2 h3 {
+    font-size: 18px; /* Decrease heading size for smaller screens */
+  }
+
+  .wrapper2 span {
+    padding: 8px; /* Decrease padding for span element */
+    font-size: 14px; /* Decrease font size for span element */
+  }
+
+  .wrapper2::after {
+    top: -8%; /* Adjust position of pseudo-element for smaller screens */
+    height: 50px; /* Decrease height of pseudo-element for smaller screens */
+  }
+}
+
 
 /*------------wrapper2------------*/
 /*------------room------------*/
@@ -757,6 +989,40 @@ p {
   letter-spacing: 3px;
 }
 
+@media (max-width: 768px) {
+  .timer {
+    padding-top: 20px; /* Adjust top padding for smaller screens */
+    padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
+  }
+
+  .timer.wrapper {
+    background-color: #29166c;
+  }
+
+  .timer h5 {
+    margin-top: -3rem; /* Adjust top margin for smaller screens */
+  }
+
+  .timer .container {
+    padding: 0 20px; /* Add horizontal padding to container for smaller screens */
+  }
+
+  .timer.wrapper {
+    background-image: none;
+  }
+
+  .clock span {
+    font-size: 40px; /* Decrease font size for clock elements */
+    line-height: 40px; /* Adjust line height for clock elements */
+  }
+
+  .clock p {
+    font-size: 16px; /* Decrease font size for clock elements */
+    letter-spacing: 2px; /* Adjust letter spacing for clock elements */
+  }
+}
+
+
 
 /*------------timer------------*/
 /*------------offer------------*/
@@ -841,6 +1107,50 @@ p {
   background: #cc8d1881;
   z-index: -1;
 }
+
+@media (max-width: 768px) {
+
+
+  .area .heading h3 {
+    font-size: 40px; /* Decrease font size for heading on smaller screens */
+  }
+
+  .area .content .right h3 {
+    font-size: 20px; /* Decrease font size for subheading on smaller screens */
+  }
+
+  .area .content .right {
+    width: 100%; /* Make the right content full width on smaller screens */
+    max-width: 100%; /* Ensure the content doesn't exceed the screen width */
+  }
+
+  .area img {
+    margin: 0 auto 20px; /* Center-align and decrease margin for images on smaller screens */
+    display: block; /* Ensure images are displayed as block elements */
+    width: 300px;
+    height: 220px;
+  }
+
+  .area ul li {
+    display: block; /* Change display to block for list items on smaller screens */
+    margin-right: 0; /* Remove right margin for list items on smaller screens */
+    margin-bottom: 10px; /* Decrease bottom margin for list items on smaller screens */
+    font-size: 16px; /* Decrease font size for list items on smaller screens */
+  }
+
+  .area .left{
+    margin-top:-2rem;
+  }
+
+  .area .left::after {
+    margin-top:1rem;
+    width: 80%; /* Adjust width of pseudo-element to cover entire area on smaller screens */
+    height: 100%; /* Decrease height of pseudo-element for smaller screens */
+    margin: 0; /* Remove margins for pseudo-element on smaller screens */
+    display: none;
+  }
+}
+
 
 /*------------area------------*/
 /*------------offer2------------*/
@@ -938,99 +1248,58 @@ p {
   flex-direction: column;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 768px) {
+  .offer2 .heading {
+    padding-top: 15%; /* Decrease top padding for heading on smaller screens */
+  }
+
+  .offer2 .heading h3 {
+    font-size: 40px; /* Decrease font size for heading on smaller screens */
+  }
+
+  .offer2.wrapper {
+    height: auto; /* Change height to auto for smaller screens */
+    padding-bottom: 20px; /* Add bottom padding for wrapper on smaller screens */
+  }
+
+  .offer2.wrapper .container {
+    max-width: 90%; /* Adjust max-width for container on smaller screens */
+  }
+
+  .offer2 .grid {
+    grid-template-columns: repeat(1, 1fr); /* Change grid layout to a single column for smaller screens */
+  }
+
+  .offer2 .box {
+    padding: 20px; /* Decrease padding for box on smaller screens */
+    margin-bottom: 20px; /* Add bottom margin for box on smaller screens */
+    text-align: center; /* Center-align text for box on smaller screens */
+  }
+
+  .offer2 .box h5 {
+    text-align: center; /* Center-align text for box on smaller screens */
+    margin-bottom: 10px; /* Adjust margin bottom for h5 on smaller screens */
+  }
+
+  .offer2 .flex i {
+    margin-right: 0; /* Remove right margin for icons on smaller screens */
+    margin-bottom: 20px; /* Add bottom margin for icons on smaller screens */
+  }
+
+  .panel {
+    width: 90%; /* Adjust width for panel on smaller screens */
+    margin: 0 auto 20px; /* Center horizontally and add bottom margin for panel on smaller screens */
+  }
+
+  .pricing-plan p {
+    text-align: center; /* Center-align text for pricing plan on smaller screens */
+  }
+
   .pricing-table {
-    flex-direction: row;
+    padding: 20px; /* Add padding for pricing table on smaller screens */
   }
 }
 
-.pricing-table * {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.pricing-plan {
-  border-bottom: 1px solid #e1f1ff;
-  padding: 25px;
-}
-
-.pricing-plan:last-child {
-  border-bottom: none;
-}
-
-@media (min-width: 900px) {
-  .pricing-plan {
-    border-bottom: none;
-    border-right: 1px solid #e1f1ff;
-    flex-basis: 100%;
-    padding: 25px 50px;
-  }
-
-  .pricing-plan:last-child {
-    border-right: none;
-  }
-}
-
-.pricing-img {
-  max-width: 100%;
-}
-
-.pricing-header {
-  color: #29166c;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.pricing-features {
-  color: #29166c;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 50px 0 25px;
-}
-
-.pricing-features-item {
-  border-top: 1px solid #e1f1ff;
-  font-size: 12px;
-  line-height: 1.5;
-  padding: 15px 0;
-}
-
-.pricing-features-item:last-child {
-  border-bottom: 1px solid #e1f1ff;
-}
-
-.pricing-price {
-  color: #29166c;
-  display: block;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.pricing-button {
-  border: 1px solid #29166c;
-  border-radius: 10px;
-  color: #348EFE;
-  display: inline-block;
-  margin: 25px 0;
-  padding: 15px 35px;
-  text-decoration: none;
-  transition: all 150ms ease-in-out;
-}
-
-.pricing-button:hover,
-.pricing-button:focus {
-  background-color: #e1f1ff;
-}
-
-.pricing-button.is-featured {
-  background-color: #48aaff;
-  color: #fff;
-}
-
-.pricing-button.is-featured:hover,
-.pricing-button.is-featured:active {
-  background-color: #269aff;
-}
 
 /*------------offer2------------*/
 /*------------customer------------*/
@@ -1078,6 +1347,27 @@ p {
 .customer span {
   opacity: 0.7;
 }
+
+@media (max-width: 768px) {
+  .customer .mtop {
+    padding: 20px; /* Decrease padding for smaller screens */
+    max-width: 80%; /* Adjust max-width for smaller screens */
+  }
+
+  .customer .heading h3 {
+    font-size: 40px; /* Decrease font size for heading on smaller screens */
+  }
+
+  .customer .item h3 {
+    font-size: 18px; /* Decrease font size for item headings on smaller screens */
+  }
+
+  .customer img {
+    width: 50px; /* Decrease width of images for smaller screens */
+    height: 50px; /* Decrease height of images for smaller screens */
+  }
+}
+
 
 /*------------customer------------*/
 /*------------gallary------------*/
@@ -1183,6 +1473,50 @@ p {
   color: #CC8C18;
   font-size: 15px;
 }
+
+@media (max-width: 768px) {
+  .blog .grid {
+    grid-template-columns: repeat(1, 1fr); /* Change grid layout to a single column for smaller screens */
+  }
+
+  .blog .box {
+    margin-bottom: 20px; /* Add bottom margin for box on smaller screens */
+  }
+
+  .blog .heading h3 {
+    font-size: 40px; /* Decrease font size for heading on smaller screens */
+  }
+
+  .blog .text {
+    padding: 10px; /* Decrease padding for text content on smaller screens */
+  }
+
+  .blog img {
+    width: 100%; /* Ensure images occupy full width on smaller screens */
+    height: auto; /* Automatically adjust image height to maintain aspect ratio */
+  }
+
+  .blog .img span {
+    top: -5%; /* Adjust position of span element for smaller screens */
+    left: -15%; /* Adjust position of span element for smaller screens */
+    padding: 15px 30px; /* Decrease padding for span element on smaller screens */
+    font-size: 12px; /* Decrease font size for span element on smaller screens */
+  }
+
+  .blog .box h3 {
+    font-size: 18px; /* Decrease font size for heading in box on smaller screens */
+    margin: 10px 0; /* Adjust margin for heading in box on smaller screens */
+  }
+
+  .blog .box i {
+    margin-right: 5px; /* Decrease margin-right for icon in box on smaller screens */
+  }
+
+  .blog a {
+    font-size: 14px; /* Decrease font size for links on smaller screens */
+  }
+}
+
 
 /*------------blog------------*/
 /*------------map------------*/
@@ -1362,4 +1696,40 @@ footer .box {
     transform: translate3d(85px,0,0);
   }
 }
+
+
+@media (max-width: 768px) {
+  .content-footer {
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+    align-items: center; /* Center align items horizontally for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
+    height: 63vh;
+  }
+
+  .logo a img {
+    width: 230px; /* Adjust the width of the logo for smaller screens */
+    height: 75px; /* Maintain aspect ratio */
+  }
+  .social-links-footer {
+    margin-top: 20px; /* Add top margin for social links on smaller screens */
+  }
+
+  .social-links-footer a {
+    margin: 0 10px; /* Add horizontal margin between social icons on smaller screens */
+  }
+
+  .contact-details-footer {
+    margin-top: 20px; /* Add top margin for contact details on smaller screens */
+  }
+
+  .contact-details-footer p {
+    margin-bottom: 10px; /* Add bottom margin for contact details paragraphs on smaller screens */
+  }
+
+  p1 {
+    font-size: 12px; /* Decrease font size for footer text on smaller screens */
+    margin-top: 20px; /* Add top margin for footer text on smaller screens */
+  }
+}
+
 
